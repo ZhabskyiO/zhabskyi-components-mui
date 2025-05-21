@@ -1,7 +1,7 @@
 {
   "author": "zhabskyi",
-  "name": "zhabskyi-components-mui",
-  "version": "0.0.3",
+  "name": "@zhabskyi/components-mui",
+  "version": "0.1.0",
   "type": "module",
   "private": false,
   "main": "./dist/zhabskyi-components-mui.umd.js",
@@ -70,8 +70,8 @@
     "@emotion/styled": "^11.14.0",
     "i": "^0.3.7"
   },
-    "publishConfig": {
+  "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
-    }
+  }
 }
