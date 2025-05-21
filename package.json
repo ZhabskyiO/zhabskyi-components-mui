@@ -1,8 +1,21 @@
 {
+  "author": "zhabskyi",
   "name": "zhabskyi-components-mui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "private": false,
+  "main": "./dist/zhabskyi-components-mui.umd.js",
+  "module": "./dist/zhabskyi-components-mui.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/zhabskyi-components-mui.es.js",
+      "require": "./dist/zhabskyi-components-mui.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -28,6 +41,7 @@
     "@storybook/react": "^8.6.14",
     "@storybook/react-vite": "^8.6.14",
     "@storybook/test": "^8.6.14",
+    "@types/node": "^22.15.21",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
@@ -43,6 +57,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.1.4"
   },
   "eslintConfig": {
