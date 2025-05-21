@@ -3,7 +3,7 @@ import { red } from "@mui/material/colors";
 
 export const mainColor = "#2db1bd";
 
-export const lightTheme: PaletteOptions = {
+export const lightPalette: PaletteOptions = {
   mode: "light",
   primary: {
     main: mainColor,
