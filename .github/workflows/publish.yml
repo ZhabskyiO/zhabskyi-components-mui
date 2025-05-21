@@ -100,8 +100,9 @@ jobs:
         with:
           node-version: 22
           registry-url: "https://registry.npmjs.org"
+          scope: "@zhabskyi"
 
       - name: Publish to NPM
-        run: pnpm publish --no-git-checks
+        run: pnpm publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
