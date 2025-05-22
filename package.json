@@ -1,7 +1,7 @@
 {
   "author": "zhabskyi",
   "name": "@zhabskyi/components-mui",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "private": false,
   "main": "./dist/zhabskyi-components-mui.umd.js",
