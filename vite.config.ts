@@ -4,17 +4,12 @@ import { resolve } from "path";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      insertTypesEntry: true
-    })
-  ],
+  plugins: [react(), dts({ tsconfigPath: "./tsconfig.app.json" })],
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "ZhabskyiComponentsMui",
-      formats: ["es", "umd"],
+      formats: ["es"],
       fileName: (format) => `zhabskyi-components-mui.${format}.js`
     },
     rollupOptions: {

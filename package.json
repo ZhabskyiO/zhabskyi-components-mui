@@ -4,9 +4,6 @@
   "version": "0.1.9",
   "type": "module",
   "private": false,
-  "main": "./dist/zhabskyi-components-mui.umd.js",
-  "module": "./dist/zhabskyi-components-mui.es.js",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -18,7 +15,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",

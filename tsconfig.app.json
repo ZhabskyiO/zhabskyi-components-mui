@@ -23,11 +23,9 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    /* Adding Types to the build */ 
-    
-    "declaration": true,
-    "declarationDir": "./dist",
-    "emitDeclarationOnly": true,
+
+
+
   },
   "include": ["src"]
 }
