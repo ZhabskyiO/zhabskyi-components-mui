@@ -116,7 +116,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         run: pnpm publish --no-git-checks --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # Add a step that runs on main pushes but not on tag pushes
       - name: Deploy to your hosting (for main branch)
