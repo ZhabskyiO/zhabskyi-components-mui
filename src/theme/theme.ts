@@ -40,10 +40,17 @@ export const darkTheme = createTheme({
 
 export const defaultTheme = lightTheme;
 
-const themes = {
+type Themes = {
+  light: MuiTheme;
+  dark: MuiTheme;
+  default: MuiTheme;
+};
+
+const themes: Themes = {
   light: lightTheme,
   dark: darkTheme,
   default: defaultTheme
 };
 export { themes };
 export type { MuiTheme as Theme };
+export type { Themes };

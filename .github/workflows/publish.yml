@@ -56,7 +56,7 @@ jobs:
   publish:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
 
@@ -91,6 +91,7 @@ jobs:
         run: pnpm run build
 
       - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v1
         with:
           generate_release_notes: true
@@ -105,6 +106,14 @@ jobs:
           scope: "@zhabskyi"
 
       - name: Publish to NPM
+        # Only publish to NPM for tags
+        if: startsWith(github.ref, 'refs/tags/v')
         run: pnpm publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Add a step that runs on main pushes but not on tag pushes
+      - name: Deploy to your hosting (for main branch)
+        if: github.ref == 'refs/heads/main'
+        run: echo "Add your deployment commands here"
+        # Example: run: pnpm deploy-storybook
