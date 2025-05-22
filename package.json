@@ -12,8 +12,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/zhabskyi-components-mui.es.js",
-      "require": "./dist/zhabskyi-components-mui.umd.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/zhabskyi-components-mui.es.js"
     }
   },
   "scripts": {
