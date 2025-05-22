@@ -8,4 +8,5 @@ export { themes } from "./theme/theme";
 export type { Themes } from "./theme/theme";
 
 export type { Theme } from "./theme/theme";
+
 export { ThemeProvider } from "@mui/material/styles";
